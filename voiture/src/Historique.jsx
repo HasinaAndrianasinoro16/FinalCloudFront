@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import Card from "./Card";
+import HtCard from "./HtCard";
 
 export default function Historique() {
     const nombreDeCartes = 12;  // Remplacez par le nombre souhaité (20 ou 12)
 
   const cards = [];
   for (let i = 0; i < nombreDeCartes; i++) {
-    cards.push(<Card key={i} />);
+    cards.push(<HtCard key={i} />);
   }
   return (
     <div className="container-fluid">
