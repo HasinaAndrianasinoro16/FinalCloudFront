@@ -10,6 +10,8 @@ import Body from './Body';
 import Messagerie from './Messagerie';
 import Favoris from './Favoris';
 import Historique from './Historique';
+import LogSign from './LogSign';
+import Sign from './Sign';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path='/favoris' element={<Favoris/>} />
         <Route path='/messagerie' element={<Messagerie/>} />
         <Route path='/historique' element={<Historique/>} />
+        <Route path='/log' element={<LogSign/>}/>
+        <Route path='/sign' element={<Sign/>}/>
       </Routes>
     </Router>
     // <>
