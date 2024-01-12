@@ -14,7 +14,7 @@ export default function Header(){
       </a>
 
     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" style={{ gap: '15px' }}>
-        <li><Link to="/annonce" className="nav-link px-3 text-white"><i className="fas fa-clipboard-list" ></i> Lise Annonce</Link></li>
+        <li><Link to="/" className="nav-link px-3 text-white"><i className="fas fa-clipboard-list" ></i> Lise Annonce</Link></li>
         <li><Link to="/favoris" className="nav-link px-3 text-white"><i className="fas fa-heart" ></i> Favoris</Link></li>
         <li><Link to="/messagerie" className="nav-link px-3 text-white"><i className="fab fa-facebook-messenger" ></i> Messagerie</Link></li>
         <li><Link to="/historique" className="nav-link px-3 text-white"><i className="fab fa-sistrix"></i> Historique</Link></li>

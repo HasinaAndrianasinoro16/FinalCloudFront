@@ -8,9 +8,9 @@ import './assets/fontawesome-5/css/all.css';
 export default function HtCard() {
 
     return (
-        <div className='col-md-4 mb-4'>
+        <div className='col-md-3 mb-4'>
             <div className="card">
-                <img src="https://images.caradisiac.com/photo/4/9/7/4/144974/S4-s0-essai-video-mercedes-classe-g-2019-culte-579778-144974.jpg" alt='Produit' className='card-img-top img-fluid rounded' />
+                <img src="https://images.caradisiac.com/logos/0/7/1/9/280719/S5-les-5-tendances-autos-du-ces-de-las-vegas-206446.jpg" alt='Produit' className='card-img-top img-fluid rounded' />
                 <div className='py-2' />
                 <div className='card-body'>
                     <h5 className='card-title'>Voiture 1</h5>

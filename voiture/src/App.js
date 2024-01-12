@@ -12,18 +12,20 @@ import Favoris from './Favoris';
 import Historique from './Historique';
 import LogSign from './LogSign';
 import Sign from './Sign';
+import Detail from './Detail';
 
 function App() {
   return (
     <Router>
       <Header/>
       <Routes>
-        <Route path='/annonce' element={<Body/>} />
+        <Route path='/' element={<Body/>} />
         <Route path='/favoris' element={<Favoris/>} />
         <Route path='/messagerie' element={<Messagerie/>} />
         <Route path='/historique' element={<Historique/>} />
         <Route path='/log' element={<LogSign/>}/>
         <Route path='/sign' element={<Sign/>}/>
+        <Route path='/detail' element={<Detail/>}/>
       </Routes>
     </Router>
     // <>
