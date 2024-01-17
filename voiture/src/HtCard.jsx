@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './assets/dist/css/bootstrap.min.css';
 import './assets/dist/js/bootstrap.bundle.min';
 import './assets/fontawesome-5/css/all.min.css';
@@ -14,7 +14,7 @@ export default function HtCard() {
                 <div className='py-2' />
                 <div className='card-body'>
                     <h5 className='card-title'>Voiture 1</h5>
-                    <p className='card-text'>Price: 205$</p>
+                    <p className='card-text'>Prix: 205$</p>
                 </div>
             </div>
         </div>

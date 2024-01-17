@@ -1,5 +1,4 @@
 import React from "react";
-// import './assets/style/login.css';
 
 export default function LogSign() {
   return (

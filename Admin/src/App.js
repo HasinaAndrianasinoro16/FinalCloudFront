@@ -2,35 +2,33 @@ import React from 'react';
 import './assets/dist/css/bootstrap.min.css';
 import './assets/dist/js/bootstrap.bundle.min';
 import './assets/fontawesome-5/css/all.min.css';
+import "primereact/resources/themes/lara-light-cyan/theme.css";
 import './assets/fontawesome-5/css/all.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes,Switch, Route } from "react-router-dom";
 
-import Header from './Header';
 import Body from './Body';
-import Messagerie from './Messagerie';
-import Favoris from './Favoris';
-import Historique from './Historique';
 import LogSign from './LogSign';
-import Sign from './Sign';
+import Detail from './Detail';
+import Stat from './Stat';
+import CRUDCategorie from './CRUDCategorie';
+import Marque from './CRUDMarque';
+import Couleur from './CRUDCouleur';
+import Modifier from './Modifier';
 
 function App() {
   return (
-    <Router>
-      <Header/>
-      <Routes>
-        <Route path='/annonce' element={<Body/>} />
-        <Route path='/favoris' element={<Favoris/>} />
-        <Route path='/messagerie' element={<Messagerie/>} />
-        <Route path='/historique' element={<Historique/>} />
-        <Route path='/log' element={<LogSign/>}/>
-        <Route path='/sign' element={<Sign/>}/>
-      </Routes>
-    </Router>
-    // <>
-    //   <Header />
-    //   <div className='py-2'></div>
-    //   <Messagerie/>
-    // </>
+<Router>
+<Routes>
+  <Route path='/' element={<LogSign />} />
+  <Route path='/annonce' element={<Body />} />
+  <Route path='/detail' element={<Detail />} />
+  <Route path='/stat' element={<Stat/>} />
+  <Route path='/gestion' element={<CRUDCategorie/>} />
+  <Route path='/marque' element={<Marque/>} />
+  <Route path='/couleur' element={<Couleur/>} />
+  <Route path='/modifier' element={<Modifier/>} />
+</Routes>
+</Router>
   );
 }
 

@@ -1,14 +1,25 @@
-import React from "react";
-// import './assets/style/login.css';
+import React,{useState} from "react";
+import { useNavigate } from 'react-router-dom';
+import Head from "./Head";
 
 export default function LogSign() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate('/annonce');
+  };
   return (
+    <>
+    <Head></Head>
     <div className="container col-xl-10 col-xxl-8 px-4 py-5">
       <div className="row align-items-center g-lg-5 py-5">
         <div className="col-lg-7 text-center text-lg-start">
-          <h1 className="display-4 fw-bold lh-1 mb-3">CarReflexe</h1>
+          <h1 className="display-4 fw-bold lh-1 mb-3">CarReflexe Admin page</h1>
           <p className="col-lg-10 fs-4">
-            Bienvenue sur CarReflexe, Trouvez la Voiture de Vos Rêves : Explorez notre sélection exceptionnelle de voitures d'occasion certifiées, toutes prêtes à vous offrir une expérience de conduite inoubliable. Parcourez notre showroom virtuel et trouvez la voiture d'occasion parfaite qui combine performance, style et fiabilité.
+            Bienvenue sur CarReflexe,ceci est la page de connexion pour les administrateur entrer vos donner de connexion pourvous connecter en tant qu'administrateur
           </p>
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
@@ -25,12 +36,11 @@ export default function LogSign() {
             <label for="floatingPassword">Password</label>
           </div>
           <div className="py-2" ></div>
-          <button class="w-100 btn btn-lg btn-success" type="submit">Log in</button>
-          {/* <hr class="my-4"/> */}
-          {/* <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small> */}
+          <button class="w-100 btn btn-lg btn-success" type="button" onClick={handleLogin}>Log in</button>
         </form>
       </div>
       </div>
     </div>
+    </>
   );
 }

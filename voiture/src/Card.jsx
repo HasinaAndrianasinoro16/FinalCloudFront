@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './assets/dist/css/bootstrap.min.css';
 import './assets/dist/js/bootstrap.bundle.min';
@@ -22,9 +22,10 @@ export default function Card() {
                 <div className='py-2' />
                 <div className='card-body'>
                     <h5 className='card-title'>Voiture 1</h5>
-                    <p className='card-text'>Price: 205$</p>
-                    <p className='card-text'>Ad favoris: <i className='fas fa-heart btn btn-outline-danger' ></i> </p>
-                    <Link to="/detail"><button className='btn btn-success' >I'm interested</button></Link>
+                    <p className='card-text'>Prix: 205$</p>
+                    <p className='card-text'>Marque: Mercedes</p>
+                    <p className='card-text'>Ajouter au favoris: <i className='fas fa-heart btn-rounded btn btn-outline-danger' ></i> </p>
+                    <Link to="/detail"><button className='btn btn-success' >Je suis interresser</button></Link>
                 </div>
             </div>
         </div>

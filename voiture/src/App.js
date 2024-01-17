@@ -7,12 +7,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from './Header';
 import Body from './Body';
-import Messagerie from './Messagerie';
+// import Messagerie from './Messagerie';
 import Favoris from './Favoris';
 import Historique from './Historique';
 import LogSign from './LogSign';
 import Sign from './Sign';
 import Detail from './Detail';
+import Message from './Message';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Body/>} />
         <Route path='/favoris' element={<Favoris/>} />
-        <Route path='/messagerie' element={<Messagerie/>} />
+        <Route path='/messagerie' element={<Message/>} />
         <Route path='/historique' element={<Historique/>} />
         <Route path='/log' element={<LogSign/>}/>
         <Route path='/sign' element={<Sign/>}/>
