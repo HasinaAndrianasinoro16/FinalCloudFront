@@ -7,7 +7,7 @@ export default function Body() {
 
   const cards = [];
   for (let i = 0; i < nombreDeCartes; i++) {
-    cards.push(<Card key={i} />);
+    cards.push(<Card key={i} voiture="Voiture 1" prix={205} marque="Mercedes" />);
   }
 
   return (

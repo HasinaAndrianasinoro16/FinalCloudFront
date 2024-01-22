@@ -21,7 +21,7 @@ export default function Header(){
 
 
       <div className="col-md-3 text-end">
-        <Link to="/log"><button type="button" className="btn btn-success btn-lg w-25 me-2">Log out</button></Link>
+        <Link to="/log"><button type="button" className="btn btn-success btn-lg me-2">Log out</button></Link>
       </div>
     </header>
     

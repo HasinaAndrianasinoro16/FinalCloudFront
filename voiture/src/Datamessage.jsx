@@ -8,15 +8,15 @@ function Datamessage({ idpersonne }) {
 
   useEffect(() => {
     if (idpersonne === 1) {
-      setPersonne({ id: 1, names: "Tafita", firstnames: "Anael" });
+      setPersonne({ id: 1, names: "Jean", firstnames: "Anael" });
       setMessage([{ for_who: "1", mp: "salut" }, { for_who: "0", mp: "salut" }]);
     }
     if (idpersonne === 2) {
-      setPersonne({ id: 2, names: "Mirado", firstnames: "Mamiarivony" });
+      setPersonne({ id: 2, names: "Gregoire", firstnames: "latouche" });
       setMessage([{ for_who: "1", mp: "Miradooooooo" }, { for_who: "0", mp: "popopopopo" } , {for_who : "0" , mp:"Zay lesy eh"},{ for_who: "1", mp: "Aiza no fotoana . 20M fmg zany an" } , {for_who : "0" , mp:"Ambondrona ok @8h"}]);
     }
     if (idpersonne === 3) {
-      setPersonne({ id: 3, names: "Miarotiana", firstnames: "Ramanantsoa" });
+      setPersonne({ id: 3, names: "Ducobu", firstnames: "gratin" });
       setMessage([{ for_who: "1", mp: "salut" }, { for_who: "0", mp: "salut" }]);
     }
   }, [idpersonne]);

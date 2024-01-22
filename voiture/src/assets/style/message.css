@@ -12,7 +12,7 @@
   width: 300px;
   height: 600px;
   border-radius: 5px;
-  overflow-y: auto;
+  overflow: auto;
 }
 .content-message .person h1 {
   color: var(--var_marine);

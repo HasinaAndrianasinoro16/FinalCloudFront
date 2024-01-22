@@ -11,11 +11,11 @@ export default function Detail() {
     const toast = useRef(null);
 
     const showSuccess = () => {
-        toast.current.show({severity:'success', summary: 'Success', detail:'Annonce Accepter', life: 3000});
+        toast.current.show({severity:'success', summary: 'Ajout', detail:'Annonce Accepter', life: 3000});
     }
   
     const showError = () => {
-      toast.current.show({severity:'error', summary: 'Error', detail:'Annonce Refuser', life: 3000});
+      toast.current.show({severity:'error', summary: 'Suppresion', detail:'Annonce Refuser', life: 3000});
   }
   
 

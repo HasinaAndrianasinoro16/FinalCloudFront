@@ -1,6 +1,11 @@
 import React from "react";
-
+import { useNavigate } from 'react-router-dom';
 export default function LogSign() {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    navigate('/messagerie');
+  };
   return (
     <div className="container col-xl-10 col-xxl-8 px-4 py-5">
       <div className="row align-items-center g-lg-5 py-5">
@@ -24,7 +29,7 @@ export default function LogSign() {
             <label for="floatingPassword">Password</label>
           </div>
           <div className="py-2" ></div>
-          <button class="w-100 btn btn-lg btn-success" type="submit">Log in</button>
+          <button class="w-100 btn btn-lg btn-success" onClick={handleLogin} type="submit">Log in</button>
           {/* <hr class="my-4"/> */}
           {/* <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small> */}
         </form>
