@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Card from "./Card";
 import Header from './Header';
+import { ScrollPanel } from 'primereact/scrollpanel';
+
 
 export default function Body() {
     const nombreDeCartes = 12;
@@ -15,13 +17,7 @@ export default function Body() {
     <Header/>
     <div className="container-fluid">
       <div className="row">
-        <div className="col-md-9">
-          <h1 className="text-start">Annonce de voiture:</h1>
-          <div className="row">
-          {cards}
-          </div>
-        </div>
-
+        
         <div className="col-md-3 text-center fixed">
           <h1>Filter</h1>
           <div className="form-floating mb-4">
@@ -36,6 +32,14 @@ export default function Body() {
             Filter Annonce
           </button>
         </div>
+
+        <ScrollPanel className="col-md-9" style={{height: '100vh' }}>
+          <h1 className="text-start">Annonce de voiture:</h1>
+          <div className="row" >
+          {cards}
+          </div>
+        </ScrollPanel>
+
       </div>
     </div>
     </>
