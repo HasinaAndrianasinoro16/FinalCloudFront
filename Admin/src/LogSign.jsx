@@ -1,27 +1,43 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Toast } from 'primereact/toast';
 import Head from "./Head";
 
 export default function LogSign() {
   const toast = useRef(null);
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('admin1@example.com');
+  const [password, setPassword] = useState('admin');
+  const [admins, setAdmins] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://autooccasion-production.up.railway.app/api/admin/allAdmin');
+        
+        if (!response.ok) {
+          throw new Error('Erreur lors de la récupération des administrateurs');
+        }
+
+        const data = await response.json();
+        setAdmins(data);
+      } catch (error) {
+        console.error('Erreur:', error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const navigate = useNavigate();
 
-  const showError = () => {
-    toast.current.show({ severity: 'error', summary: 'Erreur de connexion', detail: 'Adresse e-mail ou mot de passe incorrect', life: 3000 });
-  }
+  //suppabase a un 
 
   const handleLogin = () => {
-    const user = "admin";
-    const mdp = "admin";
+    const isAdmin = admins.some(admin => username.toLowerCase() === admin.email.toLowerCase() && password === admin.mdp);
 
-    if (username.toLowerCase() === user.toLowerCase() && password === mdp) {
+    if (isAdmin) {
       navigate('/annonce');
     } else {
-      showError();
       navigate('/');
     }
   };

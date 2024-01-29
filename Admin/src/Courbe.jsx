@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto'; // Importer Chart depuis chart.js
 
-const Courbe = () => {
+const Courbe = ({labels, datas}) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -10,16 +10,16 @@ const Courbe = () => {
 
     // Définir les données du graphique
     const data = {
-      labels: ['January', 'February', 'March', 'April', 'May'],
+      labels: labels,
       datasets: [
         {
-          label: 'Monthly Sales',
+          label: '',
           backgroundColor: '#198754',
           borderColor: '#20c997',
           borderWidth: 1,
           hoverBackgroundColor: '#20c997',
           hoverBorderColor: 'rgba(75,192,192,1)',
-          data: [65, 59, 80, 81, 56],
+          data: datas,
         },
       ],
     };

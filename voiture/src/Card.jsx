@@ -6,26 +6,42 @@ import './assets/fontawesome-5/css/all.min.css';
 import './assets/fontawesome-5/css/all.css';
 
 
-export default function Card() {
-    // const history = useHistory();
+export default function Card({annonce,idvoiture,prix,date,image,lieu,descs}) {
+    const token = localStorage.getItem('token');
+    const datePart = date.split('T')[0];
+    
+    if(token == null){
+        return(
+            <div className='col-md-4 mb-4'>
+            <div className="card">
+                <img src={image} alt='image de vehicule' className='card-img-top img-fluid rounded' />
+                <div className='py-2' />
+                <div className='card-body'>
+                    <h5 className='card-title h3'>Prix: {prix}Ar</h5>
+                    <p className='card-text'>Date annonce: {datePart}</p>
+                    <p className='card-text'>Description: {descs}</p>
+                    <p className='card-text'>lieu: {lieu}</p>
+                    <Link to={`/detail?idVoiture=${encodeURIComponent(idvoiture)}&prix=${encodeURIComponent(prix)}&annonce=${encodeURIComponent(annonce)}`}><button className='btn btn-success' >Je suis interresser</button></Link>
+                </div>
+            </div>
+        </div>
+        );
+    }
 
-    // const handleInterestClick = () => {
-    //   // Naviguer vers le composant Detail
-    //   history.push('/detail');  // Assurez-vous que le chemin correspond à celui défini dans votre application
-    // };
-  
-
+    // const addfav = 
+    
     return (
         <div className='col-md-4 mb-4'>
             <div className="card">
-                <img src="https://images.caradisiac.com/logos/0/7/1/9/280719/S5-les-5-tendances-autos-du-ces-de-las-vegas-206446.jpg" alt='Produit' className='card-img-top img-fluid rounded' />
+                <img src={image} alt='image de vehicule' className='card-img-top img-fluid rounded' />
                 <div className='py-2' />
                 <div className='card-body'>
-                    <h5 className='card-title'>Voiture 1</h5>
-                    <p className='card-text'>Prix: 205$</p>
-                    <p className='card-text'>Marque: Mercedes</p>
-                    <p className='card-text'>Ajouter au favoris: <i className='fas fa-heart btn-rounded btn btn-outline-danger' ></i> </p>
-                    <Link to="/detail"><button className='btn btn-success' >Je suis interresser</button></Link>
+                    <h5 className='card-title h3'>Prix: {prix}Ar</h5>
+                    <p className='card-text'>Date annonce: {datePart}</p>
+                    <p className='card-text'>Description: {descs}</p>
+                    <p className='card-text'>lieu: {lieu}</p>
+                    <p className='card-text'>Ajouter au favoris: <i className='fas fa-heart btn-rounded btn btn-outline-danger' id='fav' ></i> </p>
+                    <Link to={`/detail?idVoiture=${encodeURIComponent(idvoiture)}&prix=${encodeURIComponent(prix)}&annonce=${encodeURIComponent(annonce)}`}><button className='btn btn-success' >Je suis interresser</button></Link>
                 </div>
             </div>
         </div>

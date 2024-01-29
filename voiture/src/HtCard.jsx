@@ -5,16 +5,16 @@ import './assets/fontawesome-5/css/all.min.css';
 import './assets/fontawesome-5/css/all.css';
 
 
-export default function HtCard() {
-
+export default function HtCard({prix, date,image}) {
+    const datePart = date.split('T')[0];
     return (
         <div className='col-md-3 mb-4'>
             <div className="card">
-                <img src="https://images.caradisiac.com/logos/0/7/1/9/280719/S5-les-5-tendances-autos-du-ces-de-las-vegas-206446.jpg" alt='Produit' className='card-img-top img-fluid rounded' />
+                <img src={image} alt='image de vehicule' className='card-img-top img-fluid rounded' />
                 <div className='py-2' />
                 <div className='card-body'>
-                    <h5 className='card-title'>Voiture 1</h5>
-                    <p className='card-text'>Prix: 205$</p>
+                    <h5 className='card-title'>Prix:{prix} </h5>
+                    <p className='card-text'>Date Annonce: {datePart} </p>
                 </div>
             </div>
         </div>

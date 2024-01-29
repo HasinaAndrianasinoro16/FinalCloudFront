@@ -12,7 +12,7 @@ import Detail from './Detail';
 import Stat from './Stat';
 import CRUDCategorie from './CRUDCategorie';
 import Marque from './CRUDMarque';
-import Couleur from './CRUDCouleur';
+// import Couleur from './CRUDCouleur';
 import Modifier from './Modifier';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
   <Route path='/stat' element={<Stat/>} />
   <Route path='/gestion' element={<CRUDCategorie/>} />
   <Route path='/marque' element={<Marque/>} />
-  <Route path='/couleur' element={<Couleur/>} />
+  {/* <Route path='/couleur' element={<Couleur/>} /> */}
   <Route path='/modifier' element={<Modifier/>} />
 </Routes>
 </Router>
